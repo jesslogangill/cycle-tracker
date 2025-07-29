@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cycle Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>My Cycle Tracker</h1>
+    <form id="trackerForm">
+      <label>Cycle Day (suggested auto): <input type="number" name="cycleDay" id="cycleDay" required /></label>
+      <label>Date: <input type="date" name="date" required /></label>
+      <label>Weight (kg): <input type="number" step="0.1" name="weight" /></label>
+      <label>Mood:
+        <select name="mood">
+          <option value="">Select mood</option>
+          <option value="Happy">Happy</option>
+          <option value="Irritable">Irritable</option>
+          <option value="Anxious">Anxious</option>
+          <option value="Tired">Tired</option>
+        </select>
+      </label>
+      <label>Symptoms:
+        <select name="symptom">
+          <option value="">Select symptom</option>
+          <option value="Cramps">Cramps</option>
+          <option value="Bloating">Bloating</option>
+          <option value="Tender Breasts">Tender Breasts</option>
+          <option value="Headache">Headache</option>
+          <option value="Acne">Acne</option>
+        </select>
+      </label>
+      <label>Exercise: <input type="text" name="exercise" /></label>
+      <label>Food: <textarea name="food"></textarea></label>
+      <label>Water (L): <input type="number" step="0.1" name="water" /></label>
+      <label>Stress (1–10): <input type="number" min="1" max="10" name="stress" /></label>
+      <label>Sleep (hrs): <input type="number" step="0.1" name="sleep" /></label>
+      <button type="submit">Save Entry</button>
+    </form>
+    <h2>Weight Over Cycle</h2>
+    <canvas id="weightChart"></canvas>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
